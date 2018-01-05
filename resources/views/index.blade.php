@@ -13,8 +13,9 @@
     <div class="container">
 
         <div class="index-slider">
-
+            
 		 	<div class="slider-item">
+                <a href="list-notes">Notes</a>
 				<p>Power GYM (In progress)</p>
 				<h1><span>P</span>ower GYM (In progress)</h1>
 				<div class="slider-img">

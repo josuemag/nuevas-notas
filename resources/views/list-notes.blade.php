@@ -5,6 +5,10 @@
 	<title>Notes list</title>
 </head>
 <body>
-	kasjdh
+	<table border="1">
+        <tr>
+            <th>Title</th><th>Content</th><th>Creation Date</th>
+        </tr>
+    </table>
 </body>
 </html>

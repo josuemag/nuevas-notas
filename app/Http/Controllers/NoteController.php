@@ -11,7 +11,12 @@ class NoteController extends Controller
         return view('list-notes');
     }
     
-    public function showNotes(){
-        
-    }
+   public function show(){
+       $notes = \DB::table('notes')
+           ->select('*')
+           
+           ->get();
+       return view('notes.show', compact('notes'));
+   }
+    
 }
