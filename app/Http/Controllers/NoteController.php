@@ -18,12 +18,5 @@ class NoteController extends Controller
            ->get();
        return view('notes.show', compact('notes'));
    }
-
-   public function createNote(){
-
-   		return view('createNote')
-   }
-
-
     
 }
