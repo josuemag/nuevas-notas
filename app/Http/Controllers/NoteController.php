@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
-    public function notes(){
+    public function index(){
         
         return view('list-notes');
     }
