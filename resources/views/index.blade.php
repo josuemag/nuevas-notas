@@ -16,7 +16,7 @@
             
 		 	<div class="slider-item">
                 <a href="list-notes">Notes</a><br>
-                <a href="createNote">CreateNote</a>
+                <a href="{{url('createNote')}}">CreateNote</a>
 				<p>Power GYM (In progress)</p>
 				<h1><span>P</span>ower GYM (In progress)</h1>
 				<div class="slider-img">

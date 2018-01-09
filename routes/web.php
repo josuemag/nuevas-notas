@@ -21,4 +21,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/list-notes', 'NoteController@notes');
 
+Route::get('/createNote', 'createNoteController@index');
+
 Route::resource('note', 'NoteController');
+
+Route::resource('note', 'createNoteController');
+
+Route::post('/app/controllers/createNoteController','createNoteController@store');
