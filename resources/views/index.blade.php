@@ -15,8 +15,16 @@
         <div class="index-slider">
             
 		 	<div class="slider-item">
+<<<<<<< HEAD
+                <a href="{{ url('/notes/index') }}">Notes</a>
+=======
                 <a href="list-notes">Notes</a><br>
+<<<<<<< HEAD
                 <a href="{{url('createNote')}}">CreateNote</a>
+=======
+                <a href="createNote">CreateNote</a>
+>>>>>>> a2a21f40ba4da1e07279df2a78dee8db2e002290
+>>>>>>> 361167b0537e5ee454287302042eee2b2392943c
 				<p>Power GYM (In progress)</p>
 				<h1><span>P</span>ower GYM (In progress)</h1>
 				<div class="slider-img">
