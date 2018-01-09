@@ -27,4 +27,4 @@ Route::resource('note', 'NoteController');
 
 Route::resource('note', 'createNoteController');
 
-Route::post('/app/controllers/createNoteController','createNoteController@store');
+Route::post('registrar','createNoteController@store');

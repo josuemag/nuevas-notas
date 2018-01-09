@@ -16,12 +16,16 @@ class createNoteController extends Controller
   public function store(Request $request)
 	{
 		
-		$this->validate($request, [
-        'title' => 'required|min:5',
-        'content' => 'required|min:8'
-    ]);
+		$note = new note;
 
-    note::create($request->all());
-    return redirect('/createNote');
+        $note->title = $request['title'];
+        $note->content = $request['content'];
+
+
+        $note->save();
+
+        //return redirect()=>back();
+        return "Registro agregado";
+        //return "si";
 	}
 }
