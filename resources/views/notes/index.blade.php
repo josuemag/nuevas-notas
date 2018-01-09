@@ -32,7 +32,7 @@
          
      @endforeach
          <tr>
-            <td><a href>Create</a></td>
+            <td><a href="{{url('createNote')}}">Create</a></td>
             <td><a href>Delete</a></td> 
             <td><a href>Update</a></td>
          </tr>
