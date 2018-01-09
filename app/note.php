@@ -8,7 +8,7 @@ class note extends Model
 {
     protected $fillable = [
         
-        'title', 'content', 'updated_at', 'created_at'
+        'title', 'content'
     ];
     
     protected $hidden = [

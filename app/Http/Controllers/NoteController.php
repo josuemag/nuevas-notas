@@ -3,20 +3,41 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\note;
+
 
 class NoteController extends Controller
 {
     public function index(){
         
-        return view('list-notes');
+        $notes = Note::all();
+        
+        return view('notes.index', compact('notes'));
+        
     }
     
-   public function show(){
-       $notes = \DB::table('notes')
-           ->select('*')
-           
-           ->get();
-       return view('notes.show', compact('notes'));
+   public function show($id){
+       
    }
+    
+    public function create(){
+        
+    }
+    
+    public function store(){
+        
+    }
+    
+    public function edit($id){
+        
+    }
+    
+    public function update($id){
+        
+    }
+    
+    public function destroy($id){
+        
+    }
     
 }
