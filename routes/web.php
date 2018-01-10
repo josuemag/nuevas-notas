@@ -28,3 +28,5 @@ Route::resource('note', 'NoteController');
 Route::resource('note', 'createNoteController');
 
 Route::post('registrar','createNoteController@store');
+
+Route::get('/updateNote','createNoteController@ver');

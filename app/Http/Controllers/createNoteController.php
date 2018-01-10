@@ -28,4 +28,13 @@ class createNoteController extends Controller
         return "Registro agregado";
         //return "si";
 	}
+
+    public function ver(){
+
+        $notes = note::all();
+        
+        return view('updateNote', compact('notes'));
+    }
+
+    
 }
