@@ -30,3 +30,7 @@ Route::resource('note', 'createNoteController');
 Route::post('registrar','createNoteController@store');
 
 Route::get('/updateNote','createNoteController@ver');
+
+Route::get('/deleteOneNote/{id}','createNoteController@verDeleteNote')->where('id','[0-9]+');
+
+Route::delete('/destroyer/{id}','createNoteController@deleteNote')->where('id','[0-9]+')->name('note.delete');
