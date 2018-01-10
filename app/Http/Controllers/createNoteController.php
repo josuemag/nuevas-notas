@@ -36,5 +36,19 @@ class createNoteController extends Controller
         return view('updateNote', compact('notes'));
     }
 
-    
+    public function verDeleteNote($id){
+
+        $notas = note::find($id);
+
+        return view('deleteOneNote')->with('notas',$notas);
+        //return "Registro eliminado";
+    }
+
+    public function deleteNote($id){
+
+        $notas = note::find($id);
+        $notas->delete();
+        //return redirect()->route('note.index');
+        return "Registro eliminado";
+    }
 }
