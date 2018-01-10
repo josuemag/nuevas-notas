@@ -18,6 +18,8 @@ class NoteController extends Controller
     
    public function show($id){
        
+       $notes = Note::find($id);
+       return view('notes.show', compact('notes'));
    }
     
     public function create(){
@@ -32,7 +34,8 @@ class NoteController extends Controller
         
     }
     
-    public function update($id){
+    public function update(Request $request){
+        return "jashgd";        
         
     }
     

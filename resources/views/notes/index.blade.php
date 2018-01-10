@@ -9,32 +9,23 @@
      
      <table border=1>
         <tr>
-            <th>Id</th>
             <th>Title</th>
             <th>Content</th>
          </tr>
      @foreach($notes as $note)
          <tr>
-            <td>
-                {{$note->id}}
-            </td>
-            <td>
+            <td data-note="{{$note->id}}">
                 {{$note->title}}
             </td>
             <td>
                 {{$note->content}}
             </td>
+             <td><a href>Delete</a></td>
+             <td><a href="{{route('notes.show', ['id'=>$note->id])}}">Update</a></td>
          </tr>
-     
-         
-         
-         
-         
      @endforeach
          <tr>
             <td><a href="{{url('createNote')}}">Create</a></td>
-            <td><a href>Delete</a></td> 
-            <td><a href>Update</a></td>
          </tr>
         </table>
  </body>
