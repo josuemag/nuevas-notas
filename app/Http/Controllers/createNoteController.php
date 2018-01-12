@@ -24,8 +24,8 @@ class createNoteController extends Controller
 
         $note->save();
 
-        //return redirect()=>back();
-        return "Registro agregado";
+        return redirect()->back();//redireccionar al formulario de crear nota
+        //return "Registro agregado";
         //return "si";
 	}
 
@@ -46,9 +46,13 @@ class createNoteController extends Controller
 
     public function deleteNote($id){
 
-        $notas = note::find($id);
-        $notas->delete();
-        //return redirect()->route('note.index');
-        return "Registro eliminado";
+        $notas = note::find($id);//busca la nota dependiendo el id que recibe
+        $notas->delete();//funcion para eliminar
+        //return redirect()->route('/createNote'); //marca error
+        //return "Registro eliminado"; muestra mensaje despues de eliminar
+        //return redirect()->back();//redireccionar al formulario de eliminar nota... marca error
+        //return redirect()->route('note.verEliminar', array('notas' => 0)); marca error
+        //return redirect()->route('note.verEliminar',[0]); marca error
+        return redirect()->action('NoteController@index');//redirecciona a index de notas despues de eliminar
     }
 }
