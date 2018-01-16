@@ -15,18 +15,13 @@ class createNoteController extends Controller
 
   public function store(Request $request)
 	{
-		
-		$note = new note;
-
+		$note = new note;//crear un objeto de la clase nota
+        /*asignacion de los valores a los atributos del objeto*/
         $note->title = $request['title'];
         $note->content = $request['content'];
-
-
-        $note->save();
-
+        $note->save();//funcion para guardar la nueva nota
         return redirect()->back();//redireccionar al formulario de crear nota
         //return "Registro agregado";
-        //return "si";
 	}
 
     public function ver(){

@@ -9,8 +9,7 @@
 
 	@include('partials/modal')
 	
-    <div class="container">
-
+    <div class="container"> 
         <div class="index-slider">
         	<table with="50%">
         		<tr>
@@ -20,11 +19,11 @@
         				{!!Form::open(['url'=>'registrar'])!!}
 							<div class='form-group'>
 								{!!Form::label('Titulo:')!!}
-								{!!Form::text('title',null,['class'=>'form-control','placeholder'=>'Ingresa el titulo'])!!}
+								{!!Form::text('title',null,['class'=>'form-control','placeholder'=>'Ingresa el titulo', 'required' => 'required'])!!}
 							</div>
 							<div class='form-group'>
 								{!!Form::label('Contenido:')!!}
-								{!!Form::text('content',null,['class'=>'form-control','placeholder'=>'Ingresa el contenido'])!!}
+								{!!Form::text('content',null,['class'=>'form-control','placeholder'=>'Ingresa el contenido', 'required' => 'required'])!!}
 							</div>
 							<br>
 							{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
