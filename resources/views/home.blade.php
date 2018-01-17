@@ -8,10 +8,13 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+                    @if(Auth::guest())
+                        No esta logeado... no puede ver este contenido
+                    @else
                     You are logged in!<br>
                     There are yours notes:<br> 
                     <a href="{{ url('/notes/index') }}">Notes</a>
-                    
+                    @endif
                 </div>
             </div>
         </div>
