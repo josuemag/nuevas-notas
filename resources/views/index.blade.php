@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+<<<<<<< HEAD
 
 	@include('partials/modal')
 	
@@ -60,7 +61,11 @@
 
     </div>
 
+=======
+	@extends('layouts.app')
+>>>>>>> 5d192167b92e5537dafc8a7f1c6fe983b17e7c44
 @endsection
+
 
 @section('extra-js')
 @endsection

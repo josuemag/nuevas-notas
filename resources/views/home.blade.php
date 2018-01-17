@@ -8,7 +8,10 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    You are logged in!<br>
+                    There are yours notes:<br> 
+                    <a href="{{ url('/notes/index') }}">Notes</a>
+                    
                 </div>
             </div>
         </div>

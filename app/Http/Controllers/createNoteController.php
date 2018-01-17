@@ -15,18 +15,13 @@ class createNoteController extends Controller
 
   public function store(Request $request)
 	{
-		
-		$note = new note;
-
+		$note = new note;//crear un objeto de la clase nota
+        /*asignacion de los valores a los atributos del objeto*/
         $note->title = $request['title'];
         $note->content = $request['content'];
-
-
-        $note->save();
-
-        //return redirect()=>back();
-        return "Registro agregado";
-        //return "si";
+        $note->save();//funcion para guardar la nueva nota
+        return redirect()->back();//redireccionar al formulario de crear nota
+        //return "Registro agregado";
 	}
 
     public function ver(){
@@ -46,9 +41,13 @@ class createNoteController extends Controller
 
     public function deleteNote($id){
 
-        $notas = note::find($id);
-        $notas->delete();
-        //return redirect()->route('note.index');
-        return "Registro eliminado";
+        $notas = note::find($id);//busca la nota dependiendo el id que recibe
+        $notas->delete();//funcion para eliminar
+        //return redirect()->route('/createNote'); //marca error
+        //return "Registro eliminado"; muestra mensaje despues de eliminar
+        //return redirect()->back();//redireccionar al formulario de eliminar nota... marca error
+        //return redirect()->route('note.verEliminar', array('notas' => 0)); marca error
+        //return redirect()->route('note.verEliminar',[0]); marca error
+        return redirect()->action('NoteController@index');//redirecciona a index de notas despues de eliminar
     }
 }
