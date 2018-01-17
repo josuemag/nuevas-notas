@@ -15,7 +15,7 @@
         <div class="index-slider">
             
 		 	<div class="slider-item">
-                <a href="{{ url('/notes/index') }}">Notes</a>
+                <a href="{{ route('notes.home) }}">Notes</a>
 				<p>Power GYM (In progress)</p>
 				<h1><span>P</span>ower GYM (In progress)</h1>
 				<div class="slider-img">

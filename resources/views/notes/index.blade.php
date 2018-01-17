@@ -21,7 +21,7 @@
                 {{$note->content}}
             </td>
              <td><a href="{{route('note.verEliminar',['id'=>$note->id])}}">Delete</a></td>
-             <td><a href="{{route('notes.show', ['id'=>$note->id])}}">Update</a></td>
+             <td><a href="{{route('notes.show', $note->id)}}">Update</a></td>
          </tr>
      @endforeach
          <tr>

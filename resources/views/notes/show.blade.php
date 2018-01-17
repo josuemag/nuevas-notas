@@ -17,14 +17,14 @@
         <h1>askdj</h1>
 <h1>Edit Note</h1>
 
-        {!!Form::open(['url'=>'update'])!!}
+        {!!Form::model($notes, ['route' => ['notes.update', $notes->id], 'method' => 'PUT'])!!}
         <div class="form-group">
             {!!Form::label('Title: ')!!}
-            {!!Form::text('title', $notes->title,['class'=>'form-control'])!!}
+            {!!Form::text('title')!!}
         </div>
         <div class="form-group">
             {!!Form::label('Content: ')!!}
-            {!!Form::text('content', $notes->content, ['class'=>'form-control'])!!}
+            {!!Form::text('content')!!}
         </div>
         {!!Form::submit('Update', ['class'=>'btn-primary'])!!}
         {!!Form::close()!!}

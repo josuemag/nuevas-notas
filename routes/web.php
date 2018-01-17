@@ -19,20 +19,24 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/notes/index', 'NoteController@index');
+Route::get('/notes/index', [
+            'uses' => 'NoteController@index',
+            'as' => 'notes.home'
+]);
 
 Route::get('/createNote', 'createNoteController@index');
 
 Route::resource('note', 'NoteController');
 
-Route::get('/notes/show/{id}','NoteController@show')
+Route::get('/notes/show/{id}','NoteController@edit')
             ->where('id','[0-9]+')->name('notes.show');
 
 Route::resource('note', 'createNoteController');
 
 Route::post('registrar','createNoteController@store');
 
-Route::put('update', 'NoteController@update');
+Route::put('/notes/show/{id}', 'NoteController@update')
+            ->where('id', '[0-9]+')->name('notes.update');
 
 Route::get('/updateNote','createNoteController@ver');
 
